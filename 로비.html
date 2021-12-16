@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            margin: 0px;
+        }
+        .bg {
+            position: absolute;
+            z-index: 1;
+        }
+        .arrow {
+            position: absolute;
+            z-index: 100;
+            top: 756px;
+            left: 110px;
+            transform: rotate(-50deg);
+            cursor: pointer;
+        }
+        #door {
+            cursor: pointer;
+        }
+        a{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            z-index: 100;
+            background-color: #000;
+        }
+        a:visited{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <img src="강재영 얼굴 트런들/로비.jpg" usemap="#door" class="bg">
+    <button onclick="location.href='로비_전진_1.html'">
+        <img src="강재영 얼굴 트런들/arrow.png" class="arrow">
+    </button>
+    
+    <map name="door" id="door">
+        <area shape="rect" coords="684, 447, 923, 856" href="자물쇠.html" target="_parent" alt="door">
+    </map>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+
+</body>
+</html>
