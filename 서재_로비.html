@@ -9,24 +9,28 @@
             position: absolute;
             z-index: 1;
         }
-        .arrow {
+        #tb1 {
             position: absolute;
             z-index: 100;
-            top: 820px;
-            left: 1000px;
-            transform: rotate(-35deg);
+            opacity: 0;
+            top: 120px;
+            left: 1460px;
             cursor: pointer;
+        }
+        #tb1:hover{
+            opacity: 1;
         }
     </style>
 </head>
-<script type="text/javascript">
-    window.history.forward();
-    function noBack(){window.history.forward();}
-</script>
-<body onload="noBack();" onpageshow="if(event.persisted) noBack();" onunload="">
+<body   >
     <img src="강재영 얼굴 트런들/서재 로비.jpg" class="bg">
-    <button onclick="location.href='로비_전진_2.html'">
-        <img src="강재영 얼굴 트런들/arrow.png" class="arrow">
-    </button>
+    <div onclick="tb1()"id="tb1">
+        <img src="강재영 얼굴 트런들/표1.png">
+    </div>
+    <script>
+        function tb1(){
+            window.location.assign("역사_표.html")
+        }
+    </script>
 </body>
 </html>

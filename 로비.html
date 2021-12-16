@@ -17,18 +17,21 @@
             transform: rotate(-50deg);
             cursor: pointer;
         }
-        #door {
+
+        #high {
+            position: absolute;
             cursor: pointer;
+            z-index: 99;
+            opacity: 0;
+            top: 433px;
+            left: 674px;
         }
-        a{
-            width: 100px;
-            height: 100px;
+        #high:hover{
+            opacity: 1;
+        }
+        #area{
             position: absolute;
             z-index: 100;
-            background-color: #000;
-        }
-        a:visited{
-            background-color: red;
         }
     </style>
 </head>
@@ -37,11 +40,22 @@
     <button onclick="location.href='로비_전진_1.html'">
         <img src="강재영 얼굴 트런들/arrow.png" class="arrow">
     </button>
-    
-    <map name="door" id="door">
-        <area shape="rect" coords="684, 447, 923, 856" href="자물쇠.html" target="_parent" alt="door">
-    </map>
+    <div onclick="library()" id="high">
+        <img src="강재영 얼굴 트런들/문 하이라잍1.png">
+    </div>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        const visitOpen = localStorage.getItem('visitOpen');
+        function library () {
+            if(visitOpen === "true") {
+            window.location.assign("서재_로비.html");
+        } else {
+            window.location.assign("자물쇠.html");
+        }
+    }
+
+
+    </script>
 
 
 </body>

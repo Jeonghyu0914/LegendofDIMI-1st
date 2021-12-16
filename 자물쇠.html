@@ -117,9 +117,10 @@
         }
         function readit() {
             const pass = document.getElementById("pw1").value + document.getElementById("pw2").value + document.getElementById("pw3").value;
-            if(pass === '216'){
+            if(pass === '216') {
                 $("#opened").removeClass("invisible");
                 document.getElementById("opened").play();
+                localStorage.setItem('visitOpen', 'true');
             }
         }
         const nextStage = () => {
