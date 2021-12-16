@@ -21,9 +21,18 @@
 </head>
 <body>
     <img src="강재영 얼굴 트런들/역사 표.jpg" class="bg">
-    <button onclick="location.href='로비_전진_2.html'">
+    <button onclick="location.href='서재_로비.html'">
         <img src="강재영 얼굴 트런들/arrow.png" class="arrow">
     </button>
-
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        window.addEventListener("load", function(event) {
+                const item = localStorage.getItem('libraryVisited');
+                if(item !== "true"){
+                    localStorage.setItem('libraryVisited', 'true');
+                    console.log("setitem"); 
+                }
+            });
+    </script>
 </body>
 </html>

@@ -20,16 +20,107 @@
         #tb1:hover{
             opacity: 1;
         }
+        #tb2{
+            position: absolute;
+            z-index: 100;
+            opacity: 0;
+            top: 230px;
+            left: 1075px;
+            cursor: pointer;
+        }
+        #tb2:hover{
+            opacity: 1;
+        }
+        #tb3{
+            position: absolute;
+            z-index: 100;
+            opacity: 0;
+            top: 261px;
+            left: 940px;
+            cursor: pointer;
+        }
+        #tb3:hover{
+            opacity: 1;
+        }
+        #tb3{
+            position: absolute;
+            z-index: 100;
+            opacity: 0;
+            top: 261px;
+            left: 940px;
+            cursor: pointer;
+        }
+        #tb3:hover{
+            opacity: 1;
+        }
+        #tb4{
+            position: absolute;
+            z-index: 100;
+            opacity: 0;
+            top: 281px;
+            left: 868px;
+            cursor: pointer;
+        }
+        #tb4:hover{
+            opacity: 1;
+        }
+
+        #hide {
+            position: absolute;
+            z-index: 200;
+        }
+
+        .invisible {
+            display: none;
+        }
     </style>
 </head>
 <body   >
     <img src="강재영 얼굴 트런들/서재 로비.jpg" class="bg">
+    <video muted autoplay width="1920px" height="1080px" src="강재영 얼굴 트런들/숨는 씬.mp4" id="hide" onended="videoEnd()"></video>
     <div onclick="tb1()"id="tb1">
         <img src="강재영 얼굴 트런들/표1.png">
     </div>
+    <div onclick="tb2()"id="tb2">
+        <img src="강재영 얼굴 트런들/표2.png">
+    </div>
+    <div onclick="tb3()"id="tb3">
+        <img src="강재영 얼굴 트런들/표3.png">
+    </div>
+    <div onclick="tb4()"id="tb4">
+        <img src="강재영 얼굴 트런들/표4.png">
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script>
+        addEventListener("load", () => {
+            const item = window.localStorage.getItem("libraryVisited");
+            $("#hide").addClass("invisible");
+            if(item === "true") {
+                const played = window.localStorage.getItem("libraryVideo");
+                if(played === "true") {
+                    
+                } else {
+                    $("#hide").removeClass("invisible");
+                }
+            }
+        })
+
+        function videoEnd () {
+            window.localStorage.setItem("libraryVideo", "true");
+            $("#hide").addClass("invisible");
+        }
         function tb1(){
             window.location.assign("역사_표.html")
+        }
+        function tb2(){
+            window.location.assign("역사_표.html")
+        }
+        function tb3(){
+            window.location.assign("문학_표.html")
+        }
+        function tb4(){
+            window.location.assign("문학_표.html")
         }
     </script>
 </body>

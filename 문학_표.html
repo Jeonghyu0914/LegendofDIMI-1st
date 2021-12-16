@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            margin: 0px;
+        }
+        .bg {
+            position: absolute;
+            z-index: 1;
+        }
+        .arrow {
+            position: absolute;
+            z-index: 100;
+            top: 850px;
+            left: 1628px;
+            transform: rotate(90deg);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img src="강재영 얼굴 트런들/문학 표.jpg" class="bg">
+    <button onclick="location.href='서재_로비.html'">
+        <img src="강재영 얼굴 트런들/arrow.png" class="arrow">
+    </button>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        window.addEventListener("load", function(event) {
+                const item = localStorage.getItem('libraryVisited');
+                if(item !== "true"){
+                    localStorage.setItem('libraryVisited', 'true');
+                    console.log("setitem"); 
+                }
+            });
+    </script>
+</body>
+</html>`
