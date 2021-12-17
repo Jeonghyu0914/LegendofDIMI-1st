@@ -17,6 +17,28 @@
             transform: rotate(90deg);
             cursor: pointer;
         }
+        #tb {
+            position: absolute;
+            z-index: 100;
+            top: 380px;
+            left: 1025px;
+            opacity: 0;
+            cursor: pointer;
+        }
+        #tb:hover{
+            opacity: 1;
+        }
+        #hint {
+            position: absolute;
+            z-index: 100;
+            top: 100px;
+            left: 280px;
+            opacity: 0;
+            cursor: pointer;
+        }
+        #hint:hover{
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -24,6 +46,12 @@
     <button onclick="location.href='서재_로비.html'">
         <img src="강재영 얼굴 트런들/arrow.png" class="arrow">
     </button>
+    <div onclick="tb()"id="tb">
+        <img src="강재영 얼굴 트런들/문학 표2 하이라잍.png">
+    </div>
+    <div onclick="hint()"id="hint">
+        <img src="강재영 얼굴 트런들/문학 책4 하이라잍.png">
+    </div>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script>
         window.addEventListener("load", function(event) {
@@ -33,6 +61,12 @@
                     console.log("setitem"); 
                 }
             });
+        function tb(){
+            window.location.assign("종교_문학_역사_표.html")
+        }
+        function hint(){
+            window.location.assign("문학_책4.html")
+        }
     </script>
 </body>
 </html>
