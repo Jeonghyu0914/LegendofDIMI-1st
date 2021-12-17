@@ -17,6 +17,27 @@
             transform: rotate(90deg);
             cursor: pointer;
         }
+        #hint {
+            position: absolute;
+            z-index: 100;
+            top: calc(1080px - 848px);
+            left: 340px;
+            opacity: 0;
+            cursor: pointer;
+        }
+        #hint:hover{
+            opacity: 1;
+        }
+        #hint1 {
+            position: absolute;
+            z-index: 100;
+            top: 180px;
+            opacity: 0;
+            cursor: pointer;
+        }
+        #hint1:hover{
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -24,6 +45,12 @@
     <button onclick="location.href='서재_로비.html'">
         <img src="강재영 얼굴 트런들/arrow.png" class="arrow">
     </button>
+    <div onclick="hint()" id="hint">
+        <img src="강재영 얼굴 트런들/철학 책 하이라잍.png">
+    </div>
+    <div onclick="hint1()"id="hint1">
+        <img src="강재영 얼굴 트런들/총류 책 하이라잍.png">
+    </div>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script>
         window.addEventListener("load", function(event) {
@@ -33,6 +60,12 @@
                     console.log("setitem"); 
                 }
             });
+        function hint(){
+            window.location.assign("철학_책.html")
+        }
+        function hint1(){
+            window.location.assign("총류_책.html")
+        }
     </script>
 </body>
 </html>`

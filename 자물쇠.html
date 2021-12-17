@@ -78,6 +78,7 @@
 </head>
 <body>
     <video muted autoplay width="1920px" height="1080px" src="강재영 얼굴 트런들/문 잠김.mp4" id="locked"></video>
+    <audio autoplay src="강재영 얼굴 트런들/잠긴 씬.mp3" id="lockedAudio"></audio>
     <script>
         document.getElementById("locked").onended = function(){
             document.getElementById("locked").style.display = "none";
@@ -94,6 +95,7 @@
                 const visitLock = localStorage.getItem('visitLock');
                 if(visitLock === "true") {
                     $("#locked").addClass("invisible");
+                    document.getElementById("lockedAudio").removeAttribute("autoplay");
                 } else {
                 localStorage.setItem('visitLock', 'true');
                 console.log("setitem");
@@ -109,6 +111,7 @@
     <input type="number" id="pw3" maxlength="1" oninput="maxLengthCheck(this)">
     <input type="button" id="submit" value="" onClick="readit()">
     <video onended="nextStage()" muted width="1920px" height="1080px" src="강재영 얼굴 트런들/여는 씬.mp4" id="opened" class="invisible"></video>
+    <audio src="강재영 얼굴 트런들/여는 씬.mp3" id="openedAudio"></audio>
     <script>
         function maxLengthCheck(object){
             if (object.value.length > object.maxLength){
@@ -120,6 +123,7 @@
             if(pass === '216') {
                 $("#opened").removeClass("invisible");
                 document.getElementById("opened").play();
+                document.getElementById("openedAudio").play();
                 localStorage.setItem('visitOpen', 'true');
             }
         }

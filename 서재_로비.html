@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="popup.css">
     <style>
         * {
             margin: 0px;
@@ -77,15 +78,31 @@
             position: absolute;
             z-index: 200;
         }
-
         .invisible {
             display: none;
+            z-index: 0 !important;
+        }
+        #hint {
+            position: absolute;
+            z-index: 100;
+            top: 600px;
+            left: 268px;
+            opacity: 0;
+            cursor: pointer;
+        }
+        #hint:hover{
+            opacity: 1;
+        }
+        .popup{
+            width: 50% !important;
+            height: 50% !important;
         }
     </style>
 </head>
 <body   >
     <img src="강재영 얼굴 트런들/서재 로비.jpg" class="bg">
     <video muted autoplay width="1920px" height="1080px" src="강재영 얼굴 트런들/숨는 씬.mp4" id="hide" onended="videoEnd()"></video>
+    <audio src="강재영 얼굴 트런들/숨는 씬.mp3" id="hideAudio" onended="audioEnd()"></audio>
     <div onclick="tb1()"id="tb1">
         <img src="강재영 얼굴 트런들/표1.png">
     </div>
@@ -101,24 +118,48 @@
     <button onclick="location.href='철학_표.html'">
         <img src="강재영 얼굴 트런들/arrow.png" class="arrow">
     </button>
+    <div onclick="hint()"id="hint">
+        <img src="강재영 얼굴 트런들/힌트2 하이라잍.png">
+    </div>
+    <div id="foreground" class="invisible" onclick="exit()">
+        <div class="popup">
+            <button class="exit" onclick="exit()">X</button>
+            <h1>도서관 관리부 논의 자료</h1><br>
+            <div class="popup_content">
+                <span>
+                    1. 장기 연체 도서 반납 공지<br>
+                    2. 청소구역 담당 재배치<br>
+                    3. 신간 도서 비치<br>
+                    4. 비인기 도서 홍보 계획 수립 (철학 도서 등)<br>
+                </span>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script>
         addEventListener("load", () => {
             const item = window.localStorage.getItem("libraryVisited");
+            const item2 = window.localStorage.getItem("libraryVideo");
             $("#hide").addClass("invisible");
-            if(item === "true") {
-                const played = window.localStorage.getItem("libraryVideo");
-                if(played === "true") {
-                    
-                } else {
+            console.log(item);
+            if(item !== "true") {
+                
+            } else {
+                if(item2 !== "true") {
                     $("#hide").removeClass("invisible");
+                    audioPlay();
                 }
             }
         })
-
+        const audioPlay = () => {
+            console.log("played");
+            document.getElementById("hideAudio").play();
+        }
         function videoEnd () {
             window.localStorage.setItem("libraryVideo", "true");
             $("#hide").addClass("invisible");
+        }
+        function audioEnd () {
+            document.getElementById("hideAudio").setAttribute("muted", "true");
         }
         function tb1(){
             window.location.assign("역사_표.html")
@@ -131,6 +172,16 @@
         }
         function tb4(){
             window.location.assign("문학_표.html")
+        }
+        
+    </script>
+    <script>
+        function hint () {
+            $("#foreground").removeClass("invisible");
+        }
+
+        function exit() {
+            $("#foreground").addClass("invisible");
         }
     </script>
 </body>
