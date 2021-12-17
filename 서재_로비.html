@@ -9,6 +9,14 @@
             position: absolute;
             z-index: 1;
         }
+        .arrow {
+            position: absolute;
+            z-index: 100;
+            top: 820px;
+            left: 1628px;
+            transform: rotate(55deg);
+            cursor: pointer;
+        }
         #tb1 {
             position: absolute;
             z-index: 100;
@@ -90,7 +98,9 @@
     <div onclick="tb4()"id="tb4">
         <img src="강재영 얼굴 트런들/표4.png">
     </div>
-    
+    <button onclick="location.href='철학_표.html'">
+        <img src="강재영 얼굴 트런들/arrow.png" class="arrow">
+    </button>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script>
         addEventListener("load", () => {
