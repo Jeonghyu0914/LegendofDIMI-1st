@@ -29,7 +29,7 @@
 </head>
 <body>
     <img src="강재영 얼굴 트런들/황금의 철자.jpg" class="bg" usemap="#goldenSpell">
-    <video muted width="1920px" height="1080px" src="강재영 얼굴 트런들/책 찾음.mp4" id="hide" class="invisible" onended="clear()"></video>
+    <video muted width="1920px" height="1080px" src="강재영 얼굴 트런들/책 찾음.mp4" id="hide" class="invisible" onended="cleared()"></video>
     <audio src="강재영 얼굴 트런들/책 찾음.mp3" id="hideAudio"></audio>
     <button onclick="location.href='철학_책.html'">
         <img src="강재영 얼굴 트런들/arrow.png" class="arrow">
@@ -45,8 +45,9 @@
             document.getElementById("hide").play();
             document.getElementById("hideAudio").play();
         }
-        function clear(){
-            window.location.assign('클리어.html');
+        function cleared(){
+            console.log("clear!")
+            window.location.assign("클리어.html")
         }
     </script>
 </body>
