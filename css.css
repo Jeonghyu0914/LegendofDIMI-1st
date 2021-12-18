@@ -11,25 +11,22 @@ body{
     z-index: 1;
 }
 
-#tb:hover,
 #tb1:hover,
 #tb2:hover,
 #tb3:hover,
 #tb4:hover,
 #tb5:hover,
-#hint:hover,
 #hint1:hover,
-#hint2:hover {
+#hint1:hover,
+#hint3:hover {
     opacity: 1;
 }
 
-#tb,
 #tb1,
 #tb2,
 #tb3,
 #tb4,
 #tb5,
-#hint,
 #hint1,
 #hint2,
 #hint3 {
