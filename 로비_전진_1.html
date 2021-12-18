@@ -2,52 +2,27 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="css.css">
     <style>
-        * {
-            margin: 0;
-        }
-        .bg {
-            position: absolute;
-            z-index: 1;
-
-        }
         .arrow1 {
-            position: absolute;
-            z-index: 100;
             top: 656px;
             left: 715px;
             transform: rotate(-30deg);
-            cursor: pointer;
         }
         .arrow2 {
-            position: absolute;
-            z-index: 100;
             top: 836px;
             left: 825px;
             transform: rotate(-210deg);
-            cursor: pointer;
         }
-        #hint {
-            position: absolute;
-            z-index: 100;
+        #hint1 {
             top: 688px;
             left: 140px;
-            opacity: 0;
-            cursor: pointer;
-        }
-        #hint:hover{
-            opacity: 1;
-        }
-
-        .invisible {
-            display: none;
-            z-index: 0 !important;
         }
     </style>
 </head>
 <body>
     <img src="강재영 얼굴 트런들/로비 전진 1.jpg" class="bg">
-    <div onclick="hint()"id="hint">
+    <div onclick="hint1()"id="hint1">
         <img src="강재영 얼굴 트런들/힌트1 하이라잍.png">
     </div>
     <button onclick="location.href='로비_전진_2.html'">
@@ -88,7 +63,7 @@
     
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script>
-        function hint () {
+        function hint1 () {
             $("#foreground").removeClass("invisible");
         }
 

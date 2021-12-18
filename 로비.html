@@ -1,37 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css.css">
     <style>
-        * {
-            margin: 0px;
-        }
-        .bg {
-            position: absolute;
-            z-index: 1;
-        }
         .arrow {
-            position: absolute;
-            z-index: 100;
             top: 756px;
             left: 110px;
             transform: rotate(-50deg);
-            cursor: pointer;
         }
-
-        #high {
-            position: absolute;
-            cursor: pointer;
-            z-index: 99;
-            opacity: 0;
+        #hint1 {
             top: 433px;
             left: 674px;
         }
-        #high:hover{
-            opacity: 1;
-        }
         #area{
             position: absolute;
-            z-index: 100;
+            z-index: 200;
         }
     </style>
 </head>
@@ -40,7 +23,7 @@
     <button onclick="location.href='로비_전진_1.html'">
         <img src="강재영 얼굴 트런들/arrow.png" class="arrow">
     </button>
-    <div onclick="library()" id="high">
+    <div onclick="library()" id="hint1">
         <img src="강재영 얼굴 트런들/문 하이라잍1.png">
     </div>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>

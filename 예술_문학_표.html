@@ -1,43 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css.css">
+
     <style>
-        * {
-            margin: 0px;
-        }
-        .bg {
-            position: absolute;
-            z-index: 1;
-        }
         .arrow {
-            position: absolute;
-            z-index: 100;
             top: 850px;
             left: 1628px;
             transform: rotate(90deg);
-            cursor: pointer;
         }
-        #hint {
-            position: absolute;
-            z-index: 100;
+        #hint1 {
             top: 48px;
             left: 317px;
-            opacity: 0;
-            cursor: pointer;
         }
-        #hint:hover{
-            opacity: 1;
-        }
-        #tb {
-            position: absolute;
-            z-index: 100;
+        #tb1 {
             top: 215px;
             left: 127px;
-            opacity: 0;
-            cursor: pointer;
-        }
-        #tb:hover{
-            opacity: 1;
         }
     </style>
 </head>
@@ -46,17 +24,17 @@
     <button onclick="location.href='문학_표.html'">
         <img src="강재영 얼굴 트런들/arrow.png" class="arrow">
     </button>
-    <div onclick="hint()"id="hint">
+    <div onclick="hint1()"id="hint1">
         <img src="강재영 얼굴 트런들/기술과학 책 하이라잍.png">
     </div>
-    <div onclick="tb()"id="tb">
+    <div onclick="tb1()"id="tb1">
         <img src="강재영 얼굴 트런들/사회, 기술 과학, 예술 표 하이라잍.png">
     </div>
     <script>
-        function hint() {
+        function hint1() {
             window.location.assign('기술과학_책.html')
         }
-        function tb(){
+        function tb1(){
             window.location.assign('사회_기술_과학_예술_표.html')
         }
     </script>

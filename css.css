@@ -1,0 +1,62 @@
+* {
+    margin: 0px;
+    position: absolute;
+}
+
+.bg{
+    z-index: 1;
+    width: 100vw;
+}
+
+#tb:hover,
+#tb1:hover,
+#tb2:hover,
+#tb4:hover,
+#tb5:hover,
+#hint:hover,
+#hint1:hover,
+#hint2:hover {
+    opacity: 1;
+}
+
+#tb,
+#tb1,
+#tb2,
+#tb4,
+#tb5,
+#hint,
+#hint1,
+#hint2,
+#hint3 {
+    z-index: 100;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.arrow,
+.arrow1,
+.arrow2
+{
+    cursor: pointer;
+    z-index: 100;
+}
+
+#hide {
+    position: absolute;
+    z-index: 200;
+}
+
+.invisible {
+    display: none;
+    z-index: 0 !important;
+}
+
+#pw1,
+#pw2,
+#pw3 {
+    z-index: 100;
+    transform: rotate(-15deg);;
+    background-color: rgb(222, 222, 222);
+    width: 10px;
+
+}

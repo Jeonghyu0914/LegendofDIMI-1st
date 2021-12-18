@@ -2,117 +2,40 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="css.css">
     <style>
-        * {
-            margin: 0px;
-        }
-        .bg {
-            position: absolute;
-            z-index: 1;
-        }
         .arrow {
-            position: absolute;
-            z-index: 100;
             top: 820px;
             left: 1628px;
             transform: rotate(55deg);
-            cursor: pointer;
         }
         #tb1 {
-            position: absolute;
-            z-index: 100;
-            opacity: 0;
             top: 120px;
             left: 1460px;
-            cursor: pointer;
-        }
-        #tb1:hover{
-            opacity: 1;
         }
         #tb2{
-            position: absolute;
-            z-index: 100;
-            opacity: 0;
             top: 230px;
             left: 1075px;
-            cursor: pointer;
-        }
-        #tb2:hover{
-            opacity: 1;
         }
         #tb3{
-            position: absolute;
-            z-index: 100;
-            opacity: 0;
             top: 261px;
             left: 940px;
-            cursor: pointer;
-        }
-        #tb3:hover{
-            opacity: 1;
-        }
-        #tb3{
-            position: absolute;
-            z-index: 100;
-            opacity: 0;
-            top: 261px;
-            left: 940px;
-            cursor: pointer;
-        }
-        #tb3:hover{
-            opacity: 1;
         }
         #tb4{
-            position: absolute;
-            z-index: 100;
-            opacity: 0;
             top: 281px;
             left: 868px;
-            cursor: pointer;
-        }
-        #tb4:hover{
-            opacity: 1;
         }
         #tb5{
-            position: absolute;
-            z-index: 100;
-            opacity: 0;
             top: 288px;
             left: 834px;
-            cursor: pointer;
-        }
-        #tb5:hover{
-            opacity: 1;
-        }
-        #hide {
-            position: absolute;
-            z-index: 200;
-        }
-        .invisible {
-            display: none;
-            z-index: 0 !important;
-        }
-        #hint {
-            position: absolute;
-            z-index: 100;
-            top: 600px;
-            left: 268px;
-            opacity: 0;
-            cursor: pointer;
-        }
-        #hint:hover{
-            opacity: 1;
         }
         #hint1 {
-            position: absolute;
-            z-index: 100;
+            top: 600px;
+            left: 268px;
+        }
+        #hint2 {
             top: 0;
             left: calc(1920px - 267px);
-            opacity: 0;
-            cursor: pointer;
-        }
-        #hint1:hover{
-            opacity: 1;
         }
         .popup{
             width: 50% !important;
@@ -142,10 +65,10 @@
     <button onclick="location.href='철학_표.html'">
         <img src="강재영 얼굴 트런들/arrow.png" class="arrow">
     </button>
-    <div onclick="hint()"id="hint">
+    <div onclick="hint()"id="hint1">
         <img src="강재영 얼굴 트런들/힌트2 하이라잍.png">
     </div>
-    <div onclick="hint1()"id="hint1">
+    <div onclick="hint1()"id="hint2">
         <img src="강재영 얼굴 트런들/역사 책2 하이라잍.png">
     </div>
     <div id="foreground" class="invisible" onclick="exit()">

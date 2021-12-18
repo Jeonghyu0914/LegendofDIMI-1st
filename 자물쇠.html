@@ -1,61 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css.css">
+
     <style>
-        * {
-            margin: 0px;
-        }
-        .bg {
-            position: absolute;
-            z-index: 1;
-        }
-        #locked{
-            position: absolute;
-            z-index: 200;
-        }
+        #locked,
         #opened{
-            position: absolute;
             z-index: 200;
-            top: 0;
-            left: 0;
         }
         .arrow {
-            position: absolute;
-            z-index: 100;
             top: 830px;
             left: 40px;
             transform: rotate(-140deg);
-            cursor: pointer;
-        }
-        .invisible {
-            display: none;
         }
         #pw1 {
-            position: absolute;
             top: 975px;
             left: 972px;
-            z-index: 100;
-            transform: rotate(-15deg);;
-            background-color: rgb(222, 222, 222);
-            width: 10px;
         }
         #pw2 {
-            position: absolute;
             top: 963px;
             left: 1012px;
-            z-index: 100;
-            transform: rotate(-15deg);;
-            background-color: rgb(222, 222, 222);
-            width: 10px;
         }
         #pw3 {
-            position: absolute;
             top: 952px;
             left: 1050px;
-            z-index: 100;
-            transform: rotate(-15deg);;
-            background-color: rgb(222, 222, 222);
-            width: 10px;
         }
         input[type="number"]::-webkit-outer-spin-button, 
         input[type="number"]::-webkit-inner-spin-button { 
@@ -64,11 +32,10 @@
             appearance: none; 
         }
         #submit{
-            position: absolute;
             top: 990px;
             left: 890px;
             z-index: 100;
-            transform: rotate(-30deg);;
+            transform: rotate(-30deg);
             width: 10px;
             height: 35px;
             background-color: rgb(222, 222, 222);

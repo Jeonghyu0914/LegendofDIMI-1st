@@ -1,42 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css.css">
+
     <style>
-        * {
-            margin: 0px;
-        }
-        .bg {
-            position: absolute;
-            z-index: 1;
-        }
         .arrow {
-            position: absolute;
-            z-index: 200;
             top: 850px;
             left: 1628px;
             transform: rotate(90deg);
-            cursor: pointer;
-        }
-        #hint {
-            position: absolute;
-            z-index: 100;
-            top: 0px;
-            opacity: 0;
-            cursor: pointer;
-        }
-        #hint:hover{
-            opacity: 1;
         }
         #hint1 {
-            position: absolute;
-            z-index: 100;
+            top: 0px;
+        }
+        #hint2 {
             top: calc(1080px - 502px);
             left: calc(1920px - 931px - 50px);
-            opacity: 0;
-            cursor: pointer;
-        }
-        #hint1:hover{
-            opacity: 1;
         }
     </style>
 </head>
@@ -45,17 +23,17 @@
     <button onclick="location.href='철학_표.html'">
         <img src="강재영 얼굴 트런들/arrow.png" class="arrow">
     </button>
-    <div onclick="hint()" id="hint">
+    <div onclick="hint1()" id="hint1">
         <img src="강재영 얼굴 트런들/총류 책 하이라잍1.png">
     </div>
-    <div onclick="hint1()" id="hint1">
+    <div onclick="hint2()" id="hint2">
         <img src="강재영 얼굴 트런들/철학 책 줌인 하이라잍.png">
     </div>
     <script>
-        function hint(){
+        function hint1(){
             window.location.assign("총류_책.html")
         }
-        function hint1(){
+        function hint2(){
             window.location.assign("철학_책_줌인.html")
         }
     </script>
