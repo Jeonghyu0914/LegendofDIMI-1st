@@ -73,7 +73,17 @@
         #tb4:hover{
             opacity: 1;
         }
-
+        #tb5{
+            position: absolute;
+            z-index: 100;
+            opacity: 0;
+            top: 288px;
+            left: 834px;
+            cursor: pointer;
+        }
+        #tb5:hover{
+            opacity: 1;
+        }
         #hide {
             position: absolute;
             z-index: 200;
@@ -91,6 +101,17 @@
             cursor: pointer;
         }
         #hint:hover{
+            opacity: 1;
+        }
+        #hint1 {
+            position: absolute;
+            z-index: 100;
+            top: 0;
+            left: calc(1920px - 267px);
+            opacity: 0;
+            cursor: pointer;
+        }
+        #hint1:hover{
             opacity: 1;
         }
         .popup{
@@ -115,11 +136,17 @@
     <div onclick="tb4()"id="tb4">
         <img src="강재영 얼굴 트런들/표4.png">
     </div>
+    <div onclick="tb5()"id="tb5">
+        <img src="강재영 얼굴 트런들/자연, 기술 과학 표 하이라잍.png">
+    </div>
     <button onclick="location.href='철학_표.html'">
         <img src="강재영 얼굴 트런들/arrow.png" class="arrow">
     </button>
     <div onclick="hint()"id="hint">
         <img src="강재영 얼굴 트런들/힌트2 하이라잍.png">
+    </div>
+    <div onclick="hint1()"id="hint1">
+        <img src="강재영 얼굴 트런들/역사 책2 하이라잍.png">
     </div>
     <div id="foreground" class="invisible" onclick="exit()">
         <div class="popup">
@@ -173,15 +200,17 @@
         function tb4(){
             window.location.assign("문학_표.html")
         }
-        
-    </script>
-    <script>
+        function tb5(){
+            window.location.assign("자연_기술_과학_표.html")
+        }
         function hint () {
             $("#foreground").removeClass("invisible");
         }
-
         function exit() {
             $("#foreground").addClass("invisible");
+        }
+        function hint1(){
+            window.location.assign("역사_책2.html")
         }
     </script>
 </body>

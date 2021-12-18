@@ -20,7 +20,7 @@
         #hint {
             position: absolute;
             z-index: 100;
-            top: calc(1080px - 848px);
+            top: calc(1080px - 857px);
             left: 340px;
             opacity: 0;
             cursor: pointer;
@@ -38,6 +38,16 @@
         #hint1:hover{
             opacity: 1;
         }
+        #hint2 {
+            position: absolute;
+            z-index: 200;
+            top: calc(1080px - 788px);
+            opacity: 0;
+            cursor: pointer;
+        }
+        #hint2:hover{
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -50,6 +60,9 @@
     </div>
     <div onclick="hint1()"id="hint1">
         <img src="강재영 얼굴 트런들/총류 책 하이라잍.png">
+    </div>
+    <div onclick="hint2()"id="hint2">
+        <img src="강재영 얼굴 트런들/역사 책 하이라잍.png">
     </div>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script>
@@ -65,6 +78,9 @@
         }
         function hint1(){
             window.location.assign("총류_책.html")
+        }
+        function hint2(){
+            window.location.assign("역사_책.html")
         }
     </script>
 </body>

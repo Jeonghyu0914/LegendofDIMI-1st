@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            margin: 0px;
+        }
+        .bg {
+            position: absolute;
+            z-index: 1;
+        }
+        .arrow {
+            position: absolute;
+            z-index: 100;
+            top: 850px;
+            left: 1628px;
+            transform: rotate(90deg);
+            cursor: pointer;
+        }
+        #hide {
+            position: absolute;
+            z-index: 200;
+        }
+        .invisible {
+            display: none;
+            z-index: 0 !important;
+        }
+    </style>
+</head>
+<body>
+    <img src="강재영 얼굴 트런들/황금의 철자.jpg" class="bg" usemap="#goldenSpell">
+    <video muted width="1920px" height="1080px" src="강재영 얼굴 트런들/책 찾음.mp4" id="hide" class="invisible" onended="clear()"></video>
+    <audio src="강재영 얼굴 트런들/책 찾음.mp3" id="hideAudio"></audio>
+    <button onclick="location.href='철학_책.html'">
+        <img src="강재영 얼굴 트런들/arrow.png" class="arrow">
+    </button>
+    <map name="goldenSpell" id="goldenSpell" onclick="findOut()">
+        <area shape="rect" coords="890, 65, 996, 615">
+    </map>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        function findOut(){
+            console.log("play")
+            $("#hide").removeClass("invisible");
+            document.getElementById("hide").play();
+            document.getElementById("hideAudio").play();
+        }
+        function clear(){
+            window.location.assign('클리어.html');
+        }
+    </script>
+</body>
+</html>
