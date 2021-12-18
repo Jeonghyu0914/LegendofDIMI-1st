@@ -2,10 +2,14 @@
     margin: 0px;
     position: absolute;
 }
+body{
+    overflow-y: hidden;
+}
 
 .bg{
     z-index: 1;
     width: 100vw;
+    height: 100vh;
 }
 
 #tb:hover,
@@ -22,6 +26,7 @@
 #tb,
 #tb1,
 #tb2,
+#tb3,
 #tb4,
 #tb5,
 #hint,
@@ -35,10 +40,11 @@
 
 .arrow,
 .arrow1,
-.arrow2
+.arrow2,
+.arrow3
 {
     cursor: pointer;
-    z-index: 100;
+    z-index: 1000;
 }
 
 #hide {
