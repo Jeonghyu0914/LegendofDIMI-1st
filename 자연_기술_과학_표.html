@@ -27,6 +27,13 @@
         function hint1(){
             window.location.assign('자연_과학_책.html')
         }
+        window.addEventListener("load", function(event) {
+                const item = localStorage.getItem('libraryVisited');
+                if(item !== "true"){
+                    localStorage.setItem('libraryVisited', 'true');
+                    console.log("setitem"); 
+                }
+            });
     </script>
 </body>
 </html>

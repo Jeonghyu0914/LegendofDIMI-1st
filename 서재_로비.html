@@ -71,17 +71,19 @@
     <div onclick="hint1()"id="hint2">
         <img src="강재영 얼굴 트런들/역사 책2 하이라잍.png">
     </div>
-    <div id="foreground" class="invisible" onclick="exit()"></div>
-    <div id="popup"  class="invisible">
-        <button class="exit" onclick="exit()">X</button>
-        <h1>도서관 관리부 논의 자료</h1><br>
-        <div class="popup_content">
-            <span>
-                1. 장기 연체 도서 반납 공지<br>
-                2. 청소구역 담당 재배치<br>
-                3. 신간 도서 비치<br>
-                4. 비인기 도서 홍보 계획 수립 (철학 도서 등)<br>
-            </span>
+    <div id="foreground" class="invisible" onclick="exit()">
+        <div id="popup"  class="invisible">
+            <button class="exit" onclick="exit()">X</button>
+            <h1>도서관 관리부 논의 자료</h1><br>
+            <div class="popup_content">
+                <span>
+                    1. 장기 연체 도서 반납 공지<br>
+                    2. 청소구역 담당 재배치<br>
+                    3. 신간 도서 비치<br>
+                    4. 비인기 도서 홍보 계획 수립 (철학 도서 등)<br>
+                </span>
+            </div>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script>
@@ -127,11 +129,9 @@
         }
         function hint () {
             $("#foreground").removeClass("invisible");
-            $("#popup").removeClass("invisible");
         }
         function exit() {
             $("#foreground").addClass("invisible");
-            $("#popup").addClass("invisible");
         }
         function hint1(){
             window.location.assign("역사_책2.html")
