@@ -16,7 +16,7 @@
     <video muted width="1920px" height="1080px" src="강재영 얼굴 트런들/책 찾음.mp4" id="hide" class="invisible" onended="cleared()"></video>
     <audio src="강재영 얼굴 트런들/책 찾음.mp3" id="hideAudio"></audio>
     <button onclick="location.href='철학_책.html'">
-        <img src="강재영 얼굴 트런들/arrow.png" class="arrow">
+        <img src="강재영 얼굴 트런들/arrow.png" class="arrow" id="disappear">
     </button>
     <map name="goldenSpell" id="goldenSpell" onclick="findOut()">
         <area shape="rect" coords="890, 65, 996, 615">
@@ -28,6 +28,7 @@
             $("#hide").removeClass("invisible");
             document.getElementById("hide").play();
             document.getElementById("hideAudio").play();
+            $("#disappear").addClass("invisible");
         }
         function cleared(){
             console.log("clear!")

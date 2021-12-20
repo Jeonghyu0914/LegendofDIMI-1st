@@ -1,8 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="popup.css">
+    <style>
+        #fadeIn {
+            font-size: 6vh;
+            text-align: center;
+            z-index: 3000;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Hahmlet';
+            color: gold;
+            text-shadow: -3px 0 #000, 0 3px #000, 3px 0 #000, 0 3px #000;
+        }
+    </style>
 </head>
 <body>
-    <h1>강재영 얼굴 최소 트위치</h1>
+    <img src="강재영 얼굴 트런들/배경.jpg" class="bg">
+    <div id="foreground">
+        <span id="fadeIn">
+            고생 끝에 거머쥔 황금철자의 단서
+            두 개의 황금철자 중,<br> 하나가 운동 시설에 숨겨져 있다고 한다.<br><br>
+            ...손에 넣은 단서를 토대로 다음 탐사의 목적지를 향했다.    
+        </span>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#fadeIn").hide();
+            $("#fadeIn").fadeIn(2000);
+        })
+    </script>
 </body>
 </html>
