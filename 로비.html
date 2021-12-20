@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="popup.css">
     <style>
         .arrow {
             top: 756px;
@@ -16,6 +17,22 @@
             position: absolute;
             z-index: 200;
         }
+        #fadeIn {
+            font-size: 6vh;
+            text-align: center;
+            z-index: 3000;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Hahmlet';
+            color: gold;
+            text-shadow: -3px 0 #000, 0 3px #000, 3px 0 #000, 0 3px #000;
+        }
     </style>
 </head>
 <body>
@@ -26,8 +43,27 @@
     <div onclick="library()" id="hint1">
         <img src="강재영 얼굴 트런들/문 하이라잍1.png">
     </div>
+    <div id="foreground" onclick="exit()">
+        <span id="fadeIn">
+            <h1>시작</h1><br><br><br>
+            성지로 향하는 단서가 담긴 고서를 찾기 위해 왕실 도서관에 잠입하였습니다.<br><br>
+            한번 조사해봅시다.  
+        </span>
+    </div>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script>
+        window.addEventListener("load", function(event) {
+            try {
+                const start = localStorage.getItem('start');
+                if(start === "true") {
+                    $("#foreground").addClass("invisible");
+                } else {
+                localStorage.setItem('start', 'true');
+                }
+            } catch(e) {
+                localStorage.setItem('start', 'true');
+            }
+        });
         const visitOpen = localStorage.getItem('visitOpen');
         function library () {
             if(visitOpen === "true") {
@@ -36,8 +72,14 @@
             window.location.assign("자물쇠.html");
         }
     }
-
-
+    function exit() {
+            $("#foreground").addClass("invisible");
+            
+        }
+    $(document).ready(function(){
+            $("#fadeIn").hide();
+            $("#fadeIn").fadeIn(2000);
+    })
     </script>
 
 
