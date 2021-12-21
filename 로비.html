@@ -58,9 +58,11 @@
                 if(start === "true") {
                     $("#foreground").addClass("invisible");
                 } else {
+                window.localStorage.clear();
                 localStorage.setItem('start', 'true');
                 }
             } catch(e) {
+                window.localStorage.clear();
                 localStorage.setItem('start', 'true');
             }
         });
@@ -73,13 +75,8 @@
         }
     }
     function exit() {
-            $("#foreground").addClass("invisible");
-            
+            $("#foreground").fadeOut(1000)
         }
-    $(document).ready(function(){
-            $("#fadeIn").hide();
-            $("#fadeIn").fadeIn(2000);
-    })
     </script>
 
 
