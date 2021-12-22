@@ -17,7 +17,7 @@
             position: absolute;
             z-index: 200;
         }
-        #fadeIn {
+        #one, #two{
             font-size: 6vh;
             text-align: center;
             z-index: 3000;
@@ -33,6 +33,13 @@
             color: gold;
             text-shadow: -3px 0 #000, 0 3px #000, 3px 0 #000, 0 3px #000;
         }
+        #one {
+            font-size: 5vh !important;
+        }
+        #two {
+            height: 50% !important;
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -44,10 +51,14 @@
         <img src="강재영 얼굴 트런들/문 하이라잍1.png">
     </div>
     <div id="foreground" onclick="exit()">
-        <span id="fadeIn">
+        <span id="one">
             <h1>시작</h1><br><br><br>
-            성지로 향하는 단서가 담긴 고서를 찾기 위해 왕실 도서관에 잠입하였습니다.<br><br>
-            한번 조사해봅시다.  
+            디미 왕국 외곽에 위치한 국립 도서관.<br><br>
+            정보에 의하면 이곳에 두 개의 황금 철자 중<br> S의 위치에 관한 단서가 숨어있다고 한다.<br><br>
+            시외의 흔한 도서관 중 하나에 불과한데도<br> 눈에 띄게 삼엄한 경비가 추측에 힘을 실어준다.<br><br>
+        </span>
+        <span id="two">
+            감시의 눈을 피해 잠입한 뒤 <br> 빨리 황금 철자의 단서를 찾아 탈출하라!
         </span>
     </div>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -75,8 +86,12 @@
         }
     }
     function exit() {
-            $("#foreground").fadeOut(1000)
-        }
+            $("#one").fadeOut(1000)
+            $("#two").fadeIn(1000)
+            setTimeout(function(){
+                $("#foreground").fadeOut(1000)
+            }, 3000);
+    }
     </script>
 
 
