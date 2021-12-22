@@ -46,7 +46,9 @@
 <body   >
     <img src="강재영 얼굴 트런들/서재 로비.jpg" class="bg">
     <video muted autoplay width="1920px" height="1080px" src="강재영 얼굴 트런들/숨는 씬.mp4" id="hide" onended="videoEnd()"></video>
+    <video muted width="1920px" height="1080px" src="/강재영 얼굴 트런들/대화 씬.mp4" id="hide2" onended="videoEnd2()"></video>
     <audio src="강재영 얼굴 트런들/숨는 씬.mp3" id="hideAudio" onended="audioEnd()"></audio>
+    <audio src="강재영 얼굴 트런들/대화 씬.mp3" id="hideAudio2" onended="audioEnd2()"></audio>
     <div onclick="tb1()"id="tb1">
         <img src="강재영 얼굴 트런들/표1.png">
     </div>
@@ -91,6 +93,7 @@
             const item = window.localStorage.getItem("libraryVisited");
             const item2 = window.localStorage.getItem("libraryVideo");
             $("#hide").addClass("invisible");
+            $("#hide2").addClass("invisible");
             console.log(item);
             if(item !== "true") {
                 
@@ -108,6 +111,15 @@
         function videoEnd () {
             window.localStorage.setItem("libraryVideo", "true");
             $("#hide").addClass("invisible");
+            $("#hide2").removeClass("invisible");
+            document.getElementById("hide2").play();
+            audioPlay2();
+        }
+        const audioPlay2 = () => {
+            document.getElementById("hideAudio2").play();
+        }
+        function videoEnd2() {
+            $("#hide2").addClass("invisible");
         }
         function audioEnd () {
             document.getElementById("hideAudio").setAttribute("muted", "true");

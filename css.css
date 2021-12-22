@@ -44,7 +44,8 @@ body{
     z-index: 1000;
 }
 
-#hide {
+#hide,
+#hide2 {
     position: absolute;
     z-index: 200;
 }
