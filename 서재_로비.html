@@ -111,9 +111,11 @@
         function videoEnd () {
             window.localStorage.setItem("libraryVideo", "true");
             $("#hide").addClass("invisible");
-            $("#hide2").removeClass("invisible");
+            setTimeout(() => {
+                $("#hide2").removeClass("invisible");
             document.getElementById("hide2").play();
             audioPlay2();
+            }, 500)
         }
         const audioPlay2 = () => {
             document.getElementById("hideAudio2").play();
